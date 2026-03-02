@@ -82,6 +82,35 @@
   font-size: 1rem;
 }
 
+/* Filter Toggle */
+.pwr-filter-toggle {
+  margin-top: 12px;
+  padding: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.pwr-filter-toggle label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: #aaa;
+  transition: color 0.2s ease;
+}
+
+.pwr-filter-toggle label:hover {
+  color: #fff;
+}
+
+.pwr-filter-toggle input[type='checkbox'] {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
 /* Comparison Area - Fixed Height */
 .pwr-comparison-area {
   min-height: 600px;
@@ -121,7 +150,7 @@
     justify-content: center;
     padding: 10px 0;
   }
-  
+
   .pwr-scene-card {
     min-height: auto;
   }
@@ -210,14 +239,26 @@
 }
 
 @keyframes fadeInOverlay {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes bounceIn {
-  0% { transform: scale(0); opacity: 0; }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /* Scene Image */
@@ -571,13 +612,21 @@
 }
 
 @keyframes backdropFadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes backdropFadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .pwr-modal-content {
@@ -597,15 +646,26 @@
 }
 
 @keyframes contentSlideIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes contentSlideOut {
-  from { opacity: 1; transform: translateY(0); }
-  to { opacity: 0; transform: translateY(20px); }
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 }
-
 
 @media (max-width: 1200px) {
   .pwr-modal-content {
@@ -627,14 +687,15 @@
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
   z-index: 9999;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 @media (max-width: 580px) {
   #pwr-floating-btn {
     bottom: 60px;
   }
-
 }
 
 .pwr-modal-close {
@@ -674,8 +735,14 @@
 
 /* Animation for new pair loading */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .pwr-vs-container {
@@ -699,8 +766,13 @@
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .pwr-victory-title {
